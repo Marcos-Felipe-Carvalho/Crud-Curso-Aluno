@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card text-white bg-dark">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4>Lista de Alunos</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <a [routerLink]="['../../aluno/novo']" class="btn btn-primary float-end">Adicionar aluno</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text-center">CPF</th>
+                                <th class="text-center">Nome Completo</th>
+                                <th class="text-center">End. de E-mail</th>
+                                <th class="text-center">Data nas.</th>
+                                <th class="text-center">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let aluno of alunos">
+                                <td>{{aluno.cpf}}</td>
+                                <td>{{aluno.nome}}</td>
+                                <td>{{aluno.email}}</td>
+                                <td>{{aluno.dataNascimento | date: 'dd/MM/yyyy'}}</td>
+                                <td class="text-center">
+                                    <div class="d-flex justify-content-center">
+                                        <a [routerLink]="['../../aluno/editar', aluno.id]" class="mx-2"><i class="text-info fa-solid fa-pen-to-square"></i></a> 
+                                        <a (click)="remover($event, aluno)" href="#" class="mx-2"><i class="text-danger fa-solid fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <p *ngIf="alunos.length === 0">Nenhuma pessoa cadastrada.</p>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
