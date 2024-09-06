@@ -1,6 +1,8 @@
-#Informações do Aluno:
+# Informações do Aluno:
 Aluno: Marcos Felipe Carvalho
+
 CPF: 124.983.019-25
+
 E-mail: marcos.felipe2001@outlook.com
 
 # CrudCursoAluno
