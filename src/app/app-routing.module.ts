@@ -13,12 +13,10 @@ const routes: Routes = [
   {path: 'curso/listar', component: ListarCursoComponent},
   {path: 'curso/novo', component: InserirCursoComponent},
   {path: 'curso/editar/:id', component: EditarCursoComponent},
-
   {path: 'aluno', redirectTo:'aluno/listar'},
   {path: 'aluno/listar', component:ListarAlunoComponent},
   {path: 'aluno/novo', component:InserirAlunoComponent},
   {path: 'aluno/editar/:id', component:EditarAlunoComponent}
-
 ];
 
 @NgModule({

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { InserirCursoComponent } from './inserir-curso/inserir-curso.component';
 import { EditarCursoComponent } from './editar-curso/editar-curso.component';
+import { CursoService } from './services/curso.service';
 
 
 
@@ -18,6 +19,9 @@ import { EditarCursoComponent } from './editar-curso/editar-curso.component';
     CommonModule,
     RouterModule,
     FormsModule
+  ],
+  providers:[
+    CursoService
   ]
 })
 export class CursoModule { }

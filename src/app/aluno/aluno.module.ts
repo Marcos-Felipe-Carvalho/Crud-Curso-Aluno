@@ -5,6 +5,7 @@ import { InserirAlunoComponent } from './inserir-aluno/inserir-aluno.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { EditarAlunoComponent } from './editar-aluno/editar-aluno.component';
+import { AlunoService } from './services/aluno.service';
 
 
 
@@ -18,6 +19,9 @@ import { EditarAlunoComponent } from './editar-aluno/editar-aluno.component';
     CommonModule,
     RouterModule,
     FormsModule
+  ],
+  providers:[
+    AlunoService
   ]
 })
 export class AlunoModule { }
